@@ -116,12 +116,24 @@ nav a:hover {
 }
 
 /* HERO SECTION */
+/* HERO SECTION */
 .hero {
     height: 85vh;
     display: flex;
     align-items: center;
     padding: 0 5%;
     border-bottom: 1px solid var(--border);
+    
+    /* SFONDO CON IMMAGINE E SFUMATURA SCURA PER LEGGERE IL TESTO */
+    background: linear-gradient(
+        to right, 
+        rgba(0, 0, 0, 0.9) 10%, 
+        rgba(0, 0, 0, 0.4) 100%
+    ), url('../assets/anto.jpg');
+    
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .hero h1 {
@@ -134,9 +146,10 @@ nav a:hover {
 
 .hero p {
     font-size: 1.2rem;
-    color: var(--muted);
+    color: #cccccc; /* Leggermente più chiaro per contrastare lo sfondo */
     margin: 1.5rem 0 2.5rem 0;
     max-width: 500px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.8); /* Ombra per massima leggibilità */
 }
 
 /* BOTTONI */
