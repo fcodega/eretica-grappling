@@ -44,7 +44,7 @@ body::before {
     transform: translate(-50%, -50%); /* Centra perfettamente */
     width: 80%; /* Grandezza del logo rispetto allo schermo */
     height: 80%;
-    background-image: url('assets/logo-bg.png'); /* Percorso del tuo logo */
+    background-image: url('https://images.unsplash.com/photo-1599058917212-97d140f09a0a?q=80&w=1000&auto=format&fit=crop'); /* Percorso del tuo logo */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /* Adatta il logo senza tagliarlo */
