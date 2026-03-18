@@ -1,5 +1,6 @@
 /* ERETICA GRAPPLING - OFFICIAL STYLE SHEET 
    Concept: Brutalist Minimalist 
+   Updated: Background Logo & Multi-page support
 */
 
 :root {
@@ -28,6 +29,32 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    position: relative; /* Necessario per il logo di sfondo */
+    overflow-x: hidden;
+}
+
+/* -----------------------------------------------------------
+   LOGO DI SFONDO (WATERMARK)
+   ----------------------------------------------------------- */
+body::before {
+    content: "";
+    position: fixed; /* Rimane fermo mentre scorri */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra perfettamente */
+    width: 80%; /* Grandezza del logo rispetto allo schermo */
+    height: 80%;
+    background-image: url('../assets/logo-bg.png'); /* Percorso del tuo logo */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* Adatta il logo senza tagliarlo */
+    
+    /* L'EFFETTO DISSOLVENZA */
+    opacity: 0.03; /* Imposta la trasparenza (0.01 = quasi invisibile, 0.1 = molto visibile) */
+    
+    filter: grayscale(100%); /* Lo rende monocromatico se non lo è già */
+    z-index: -1; /* Lo mette sotto a tutto il testo */
+    pointer-events: none; /* Non interferisce con i clic */
 }
 
 /* NAVIGAZIONE */
