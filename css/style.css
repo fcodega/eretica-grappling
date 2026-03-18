@@ -1,56 +1,257 @@
-/* TEST DI COLLEGAMENTO: Se vedi lo sfondo rosso, il file è collegato! */
-body {
-    background-color: #000 !important; /* Forza il nero */
-    color: white !important;
-}
+/* ERETICA GRAPPLING - OFFICIAL STYLE SHEET 
+   Concept: Brutalist Minimalist 
+*/
 
 :root {
     --bg: #000000;
     --fg: #ffffff;
-    --accent: #ff3e3e;
-    --muted: #666666;
+    --accent: #ff3e3e; /* Rosso Eretica */
+    --muted: #888888;
     --border: #222222;
+    --card-bg: #0a0a0a;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* RESET E BASI */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    font-family: 'Inter', sans-serif;
     background-color: var(--bg);
     color: var(--fg);
-    line-height: 1.5;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* NAVIGAZIONE */
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 1.5rem 5%;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.2rem;
+    letter-spacing: -1px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--fg);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+/* IL TASTO PROVA NELLA NAV */
+.btn-nav {
+    background: var(--accent);
+    color: white !important;
+    padding: 0.6rem 1.2rem;
+    border-radius: 2px;
+}
+
+.btn-nav:hover {
+    background: white !important;
+    color: black !important;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
     border-bottom: 1px solid var(--border);
 }
 
-.hero {
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 5%;
+.hero h1 {
+    font-size: clamp(3.5rem, 12vw, 9rem);
+    line-height: 0.85;
+    font-weight: 900;
+    letter-spacing: -4px;
+    text-transform: uppercase;
 }
 
-.hero h1 {
-    font-size: clamp(3rem, 10vw, 8rem);
-    line-height: 0.9;
+.hero p {
+    font-size: 1.2rem;
+    color: var(--muted);
+    margin: 1.5rem 0 2.5rem 0;
+    max-width: 500px;
+}
+
+/* BOTTONI */
+.btn-main {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--fg);
+    color: var(--bg);
+    text-decoration: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    border: none;
+}
+
+.btn-main:hover {
+    background: var(--accent);
+    color: var(--fg);
+    transform: translateY(-2px);
+}
+
+/* SEZIONI GENERALI */
+.section-padding {
+    padding: 8rem 5%;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-tag {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--accent);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.grid-2 h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.bg-dark {
+    background-color: #050505;
+}
+
+/* GRIGLIA CORSI */
+.grid-courses {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border);
+}
+
+.course-card {
+    background: var(--bg);
+    padding: 4rem 2rem;
+    transition: 0.4s ease;
+}
+
+.course-card:hover {
+    background: #0f0f0f;
+}
+
+.course-card h3 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
     font-weight: 900;
 }
 
-.btn-main {
-    display: inline-block;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    background: white;
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
+.course-card p {
+    color: var(--muted);
 }
 
-.section-padding { padding: 5rem 5%; border-bottom: 1px solid var(--border); }
-.section-tag { color: var(--accent); font-size: 0.8rem; font-weight: bold; display: block; margin-bottom: 1rem; }
+/* PAGINA PROVA & FORM */
+.form-container {
+    max-width: 600px;
+    margin-top: 3rem;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+    color: var(--muted);
+    text-transform: uppercase;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: #0a0a0a;
+    border: 1px solid var(--border);
+    color: white;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.beginner-box {
+    background: var(--card-bg);
+    padding: 4rem;
+    border: 1px solid var(--border);
+}
+
+/* FOOTER */
+footer {
+    padding: 4rem 5%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+    nav { display: none; } /* In un secondo momento potremo aggiungere un menu mobile */
+    .hero h1 { font-size: 4rem; }
+    .section-padding { padding: 4rem 5%; }
+}
