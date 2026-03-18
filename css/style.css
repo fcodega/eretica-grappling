@@ -50,7 +50,7 @@ body::before {
     background-size: contain; /* Adatta il logo senza tagliarlo */
     
     /* L'EFFETTO DISSOLVENZA */
-    opacity: 0.03; /* Imposta la trasparenza (0.01 = quasi invisibile, 0.1 = molto visibile) */
+    opacity: 0.5; /* Imposta la trasparenza (0.01 = quasi invisibile, 0.1 = molto visibile) */
     
     filter: grayscale(100%); /* Lo rende monocromatico se non lo è già */
     z-index: -1; /* Lo mette sotto a tutto il testo */
