@@ -26,49 +26,80 @@
     </header>
 
     <main class="section-padding">
-        <span class="section-tag">/ Candidatura</span>
-        <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;">SALI SUL TATAMI.</h1>
-        <p style="color: var(--muted); max-width: 600px;">La prima lezione è un test reciproco. Tu testi il nostro metodo, noi testiamo la tua attitudine. Compila il modulo per bloccare il tuo posto.</p>
+        
+        <div class="grid-2">
+            <div>
+                <span class="section-tag">/ Candidatura</span>
+                <h1 style="font-size: 3.5rem; font-weight: 900; margin-bottom: 1rem;">SALI SUL TATAMI.</h1>
+                <p style="color: var(--muted); max-width: 600px;">La prima lezione è un test reciproco. Tu testi il nostro metodo, noi testiamo la tua attitudine. Compila il modulo per bloccare il tuo posto.</p>
 
-        <div class="form-container">
-            <form action="#">
-                <div class="form-group">
-                    <label>NOME COMPLETO</label>
-                    <input type="text" placeholder="Es. Mario Rossi" required>
+                <div class="form-container">
+                    <form action="#">
+                        <div class="form-group">
+                            <label>NOME COMPLETO</label>
+                            <input type="text" placeholder="Es. Mario Rossi" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>EMAIL</label>
+                            <input type="email" placeholder="latua@email.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>ESPERIENZA PREGRESSA</label>
+                            <select>
+                                <option>Nessuna (Principiante assoluto)</option>
+                                <option>Meno di 1 anno</option>
+                                <option>Oltre 1 anno (Avanzato)</option>
+                                <option>Provengo da altre arti marziali</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>DISCIPLINA DI INTERESSE</label>
+                            <select>
+                                <option>Grappling (No-Gi)</option>
+                                <option>BJJ (Gi)</option>
+                                <option>Entrambi</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>MESSAGGIO (FACOLTATIVO)</label>
+                            <textarea rows="4" placeholder="Eventuali infortuni o obiettivi specifici..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-main" style="border:none; cursor:pointer; width:100%;">Invia Richiesta</button>
+                    </form>
                 </div>
+            </div>
+
+            <div class="faq-container">
+                <span class="section-tag">/ F.A.Q.</span>
+                <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 2rem; text-transform: uppercase;">Prima di iniziare</h2>
                 
-                <div class="form-group">
-                    <label>EMAIL</label>
-                    <input type="email" placeholder="latua@email.com" required>
+                <div class="faq-item">
+                    <h3>Cosa mi serve il primo giorno?</h3>
+                    <p>Una maglietta attillata (rashguard se ce l'hai) e pantaloncini sportivi SENZA zip o tasche per evitare infortuni. Porta un paio di ciabatte per scendere dal tatami, un asciugamano e dell'acqua. Il paradenti è vivamente consigliato.</p>
                 </div>
 
-                <div class="form-group">
-                    <label>ESPERIENZA PREGRESSA</label>
-                    <select>
-                        <option>Nessuna (Principiante assoluto)</option>
-                        <option>Meno di 1 anno</option>
-                        <option>Oltre 1 anno (Avanzato)</option>
-                        <option>Provengo da altre arti marziali</option>
-                    </select>
+                <div class="faq-item">
+                    <h3>Devo essere allenato per iniziare?</h3>
+                    <p>No. Nessuno è "già in forma" per la lotta finché non inizia a lottare. Il fiato, la resistenza e la muscolatura specifica si costruiscono lezione dopo lezione, direttamente sul tatami.</p>
                 </div>
 
-                <div class="form-group">
-                    <label>DISCIPLINA DI INTERESSE</label>
-                    <select>
-                        <option>Grappling (No-Gi)</option>
-                        <option>BJJ (Gi)</option>
-                        <option>Entrambi</option>
-                    </select>
+                <div class="faq-item">
+                    <h3>Posso fare sparring da subito?</h3>
+                    <p>Sì, ma in modo controllato. Verrai affiancato a cinture avanzate o istruttori che ti permetteranno di testare la pressione senza rischi. Da noi lo sparring non è una gara all'ultimo sangue, è un laboratorio di apprendimento.</p>
                 </div>
 
-                <div class="form-group">
-                    <label>MESSAGGIO (FACOLTATIVO)</label>
-                    <textarea rows="4" placeholder="Eventuali infortuni o obiettivi specifici..."></textarea>
+                <div class="faq-item">
+                    <h3>Non ho il Kimono (Gi), è un problema?</h3>
+                    <p>Assolutamente no. Per le tue prime lezioni di prova puoi venire in pantaloncini e maglietta anche se la classe prevede il kimono. Ti spiegheremo noi, col tempo, quale attrezzatura ti servirà.</p>
                 </div>
-
-                <button type="submit" class="btn-main" style="border:none; cursor:pointer; width:100%;">Invia Richiesta</button>
-            </form>
+            </div>
         </div>
+
     </main>
 
     <footer>
