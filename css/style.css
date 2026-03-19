@@ -44,7 +44,7 @@ body::before {
     transform: translate(-50%, -50%); /* Centra perfettamente */
     width: 80%; /* Grandezza del logo rispetto allo schermo */
     height: 80%;
-    background-image: url('https://graciesmeatongrange.com.au/wp-content/uploads/2020/09/gracie-smeaton-grange-bjj-no-go.jpg'); /* Percorso del tuo logo */
+    background-image: ('../assets/sfondo.JPG'); /* Percorso del tuo logo */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /* Adatta il logo senza tagliarlo */
