@@ -71,6 +71,46 @@ body::before {
     z-index: 1000;
 }
 
+/* DROPDOWN MENU CORSI */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.95);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.9);
+    z-index: 1001;
+    border: 1px solid var(--border);
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    padding: 0.5rem 0;
+}
+
+.dropdown-content a {
+    color: var(--fg);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--border);
+    color: var(--accent);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
 .logo {
     font-weight: 900;
     font-size: 1.2rem;

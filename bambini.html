@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORSI BAMBINI | ERETICA GRAPPLING</title>
+    
+    <meta name="description" content="Corso di Brazilian Jiu Jitsu con kimono per bambini a Sondrio.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .timetable {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 3rem;
+            font-size: 0.9rem;
+        }
+        .timetable th, .timetable td {
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            vertical-align: top;
+        }
+        .timetable th {
+            color: var(--muted);
+            width: 15%;
+            font-weight: 900;
+        }
+        .time-block {
+            display: inline-block;
+            margin-right: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .time { font-weight: 900; letter-spacing: 1px; }
+        .type { color: var(--accent); font-weight: 700; margin-left: 0.5rem; }
+        .level { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+        
+        .maat-box {
+            background: #111;
+            padding: 2rem;
+            margin-top: 4rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .timetable th, .timetable td { display: block; width: 100%; padding: 1rem 0; }
+            .timetable th { border-bottom: none; padding-bottom: 0; }
+            .time-block { display: block; margin-bottom: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html">ERETICA</a>
+        </div>
+        <nav>
+            <a href="about.html">Chi Siamo</a>
+            <div class="dropdown">
+                <a href="corsi.html" style="cursor: pointer; color: var(--accent); border-bottom: 1px solid var(--accent);">Corsi & Orari ▾</a>
+                <div class="dropdown-content">
+                    <a href="corsi.html">Adulti & Junior</a>
+                    <a href="bambini.html" style="color: var(--accent);">Bambini</a>
+                </div>
+            </div>
+            <a href="contatti.html">Dove Siamo</a>
+            <a href="prova.html" class="btn-nav">Prova Gratuita</a>
+        </nav>
+    </header>
+
+    <main class="section-padding">
+        <span class="section-tag">/ Next Gen</span>
+        <h1 style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; line-height: 0.9;">KIDS CLASS.</h1>
+        <p style="color: var(--muted); max-width: 600px; margin-top: 1.5rem;">Costruiamo le fondamenta del movimento e della disciplina in un ambiente controllato. Il corso bambini si concentra esclusivamente sulla pratica con il kimono.</p>
+
+        <div class="grid-courses" style="margin-top: 4rem;">
+            <div class="course-card">
+                <span class="section-tag">/ GI</span>
+                <h3>Brazilian Jiu Jitsu</h3>
+                <p>La lotta come strumento di educazione. Aiutiamo i più piccoli a sviluppare coordinazione motoria, rispetto reciproco e fiducia nei propri mezzi. Niente colpi, solo lotta a terra strutturata come un gioco di logica e controllo.</p>
+            </div>
+        </div>
+
+        <div style="margin-top: 8rem;">
+            <span class="section-tag">/ Timetable Kids</span>
+            <h2>ORARI BAMBINI</h2>
+            
+            <table class="timetable">
+                <tbody>
+                    <tr>
+                        <th>MARTEDÌ</th>
+                        <td>
+                            <div class="time-block">
+                                <span class="time">17:30 - 18:30</span> <span class="type">GI</span>
+                                <span class="level">Corso Bambini</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>GIOVEDÌ</th>
+                        <td>
+                            <div class="time-block">
+                                <span class="time">17:30 - 18:30</span> <span class="type">GI</span>
+                                <span class="level">Corso Bambini</span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="maat-box">
+                <h3 style="margin-bottom: 0.5rem; text-transform: uppercase;">Prenota la classe di prova</h3>
+                <p style="color: var(--muted); font-size: 0.9rem;">Contattaci tramite il modulo dedicato o usa l'app ufficiale <strong>MAAT</strong> per iscrivere tuo figlio alla classe.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>© 2026 ERETICA<br>Via Largo Sindelfingen 13, Sondrio (SO)</p>
+        </div>
+        <div class="footer-right">
+            <p>DESIGNED FOR THE UNORTHODOX</p>
+        </div>
+    </footer>
+
+</body>
+</html>
