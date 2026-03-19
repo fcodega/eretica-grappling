@@ -46,6 +46,33 @@
             /* Inverte i colori di Google Maps per farli fondere col sito scuro */
             filter: invert(90%) hue-rotate(180deg) contrast(100%); 
         }
+
+        /* Bottone Social Eretica */
+        .btn-social {
+            display: inline-flex;
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--fg) !important;
+            text-decoration: none !important;
+            border: 2px solid var(--border);
+            padding: 1rem 2rem;
+            margin-top: 0.5rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-social:hover {
+            border-color: var(--accent);
+            color: var(--accent) !important;
+            background-color: rgba(255, 62, 62, 0.05); /* Leggero riflesso rosso */
+            transform: translateY(-2px);
+        }
+        
+        .btn-social svg {
+            margin-right: 12px;
+        }
     </style>
 </head>
 <body>
@@ -76,7 +103,14 @@
                 <a href="mailto:info@ereticagrappling.it">info@ereticagrappling.it</a>
 
                 <h3>Social</h3>
-                <a href="https://instagram.com/ereticagrappling" target="_blank" style="font-size: 2.5rem; text-decoration: underline; text-decoration-color: var(--accent);">@ereticagrappling ↗</a>
+                <a href="https://www.instagram.com/ereticajiujitsu/" target="_blank" class="btn-social">
+                    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    @ereticajiujitsu
+                </a>
             </div>
 
             <div>
