@@ -44,7 +44,7 @@ body::before {
     transform: translate(-50%, -50%); /* Centra perfettamente */
     width: 80%; /* Grandezza del logo rispetto allo schermo */
     height: 80%;
-    background-image: ('../assets/sfondo.JPG'); /* Percorso del tuo logo */
+    background-image: url('https://www.bjjee.com/wp-content/uploads/2023/12/gordon-ryan-guard-pass-.jpeg'); /* Percorso del tuo logo */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; /* Adatta il logo senza tagliarlo */
