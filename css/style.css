@@ -329,11 +329,115 @@ footer {
 }
 
 /* RESPONSIVE */
+/* -----------------------------------------------------------
+   RESPONSIVE & MOBILE DESIGN (Max 768px)
+   ----------------------------------------------------------- */
 @media (max-width: 768px) {
-    .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
-    nav { display: none; } /* In un secondo momento potremo aggiungere un menu mobile */
-    .hero h1 { font-size: 4rem; }
-    .section-padding { padding: 4rem 5%; }
+    /* 1. Spaziature e Griglie generali */
+    .grid-2 { 
+        grid-template-columns: 1fr; 
+        gap: 3rem; 
+    }
+    .section-padding { 
+        padding: 4rem 5%; 
+    }
+    
+    /* 2. Hero Section (Testo più compatto) */
+    .hero { 
+        height: auto; 
+        min-height: 80vh; 
+        padding-top: 6rem; 
+        padding-bottom: 4rem; 
+    }
+    .hero h1 { 
+        font-size: 4rem; 
+        letter-spacing: -2px; 
+        line-height: 0.9;
+    }
+
+    /* 3. La Navigazione Mobile (Stack Brutalista) */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem 5%;
+    }
+    .logo { 
+        margin-bottom: 1.5rem; 
+        font-size: 1.5rem;
+    }
+    nav { 
+        display: flex; 
+        flex-direction: column; /* Impila i link verticalmente */
+        width: 100%;
+        gap: 1rem; 
+    }
+    nav a { 
+        font-size: 1rem; /* Più grande per essere cliccabile col pollice */
+        padding: 0.5rem 0;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    /* 4. Gestione Tendina su Mobile */
+    .dropdown { 
+        width: 100%; 
+    }
+    .dropdown > a { 
+        display: none; /* Nascondiamo la scritta generica "Corsi & Orari ▾" su mobile */
+    }
+    .dropdown-content {
+        display: flex; /* Mostriamo direttamente i due sottomenù */
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        border-left: 2px solid var(--accent);
+        padding: 0;
+        margin: 0;
+    }
+    .dropdown-content a {
+        padding: 0.8rem 1rem;
+        border-bottom: none;
+        color: var(--muted);
+    }
+    
+    /* 5. Tasto Prova Mobile */
+    .btn-nav { 
+        text-align: center; 
+        margin-top: 1rem; 
+        padding: 1rem !important;
+    }
+
+    /* 6. Tabelle Orari (Timetable) per Schermi Piccoli */
+    .timetable th, .timetable td { 
+        display: block; 
+        width: 100%; 
+        padding: 0.5rem 0; 
+    }
+    .timetable th { 
+        border-bottom: none; 
+        padding-top: 1.5rem; 
+        color: var(--accent); 
+    }
+    .timetable td { 
+        padding-bottom: 1.5rem; 
+    }
+    .time-block { 
+        display: block; 
+        margin-bottom: 1rem; 
+    }
+
+    /* 7. Footer e Contatti */
+    footer { 
+        flex-direction: column; 
+        gap: 2rem; 
+        text-align: left; 
+    }
+    .contact-info p, .contact-info a { 
+        font-size: 1.2rem; 
+    }
+    .map-container { 
+        min-height: 300px; 
+    }
 }
 
 /* SEZIONE FAQ */
