@@ -118,14 +118,28 @@
     </footer>
 
     <script>
+        // Gestione apertura/chiusura Menu Mobile (Hamburger)
         const btn = document.getElementById('hamburger-btn');
         const nav = document.getElementById('mobile-nav');
         
         if (btn && nav) {
             btn.addEventListener('click', () => {
                 nav.classList.toggle('active');
-                // Cambia l'icona da ☰ a ✕ quando è aperto
                 btn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+            });
+        }
+
+        // Gestione apertura/chiusura Tendina "Corsi & Orari" su Mobile
+        const dropdownLink = document.querySelector('.dropdown > a');
+        const dropdown = document.querySelector('.dropdown');
+        
+        if (dropdownLink && dropdown) {
+            dropdownLink.addEventListener('click', (e) => {
+                // Solo se siamo su schermi piccoli (mobile)
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // Evita strani salti della pagina
+                    dropdown.classList.toggle('open');
+                }
             });
         }
     </script>
