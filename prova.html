@@ -40,39 +40,45 @@
                 <p style="color: var(--muted); max-width: 600px;">La prima lezione è un test reciproco. Tu testi il nostro metodo, noi testiamo la tua attitudine. Compila il modulo per bloccare il tuo posto.</p>
 
                 <div class="form-container">
-                    <form action="#">
+                    <form action="https://formspree.io/f/xqeyjqlv" method="POST">
+                        
                         <div class="form-group">
                             <label>NOME COMPLETO</label>
-                            <input type="text" placeholder="Es. Mario Rossi" required>
+                            <input type="text" name="Nome" placeholder="Es. Mario Rossi" required>
+                        </div>
+                                                
+                        <div class="form-group">
+                            <label>ANNI</label>
+                            <input type="text" name="Age" required>
                         </div>
                         
                         <div class="form-group">
                             <label>EMAIL</label>
-                            <input type="email" placeholder="latua@email.com" required>
+                            <input type="email" name="Email" placeholder="latua@email.com" required>
                         </div>
 
                         <div class="form-group">
                             <label>ESPERIENZA PREGRESSA</label>
-                            <select>
-                                <option>Nessuna (Principiante assoluto)</option>
-                                <option>Meno di 1 anno</option>
-                                <option>Oltre 1 anno (Avanzato)</option>
-                                <option>Provengo da altre arti marziali</option>
+                            <select name="Esperienza">
+                                <option value="Principiante">Nessuna (Principiante assoluto)</option>
+                                <option value="Meno di 1 anno">Meno di 1 anno</option>
+                                <option value="Avanzato">Oltre 1 anno (Avanzato)</option>
+                                <option value="Altre Arti Marziali">Provengo da altre arti marziali</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>DISCIPLINA DI INTERESSE</label>
-                            <select>
-                                <option>Grappling (No-Gi)</option>
-                                <option>BJJ (Gi)</option>
-                                <option>Entrambi</option>
+                            <select name="Disciplina">
+                                <option value="No-Gi">Grappling (No-Gi)</option>
+                                <option value="Gi">BJJ (Gi)</option>
+                                <option value="Entrambi">Entrambi</option>
                             </select>
                         </div>
 
                         <div class="form-group">
                             <label>MESSAGGIO (FACOLTATIVO)</label>
-                            <textarea rows="4" placeholder="Eventuali infortuni o obiettivi specifici..."></textarea>
+                            <textarea name="Messaggio" rows="4" placeholder="Eventuali infortuni o obiettivi specifici..."></textarea>
                         </div>
 
                         <button type="submit" class="btn-main" style="border:none; cursor:pointer; width:100%;">Invia Richiesta</button>
