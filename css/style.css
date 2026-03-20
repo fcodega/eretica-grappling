@@ -503,29 +503,32 @@ footer {
     font-size: 1rem;
 }
 
-/* BOTTONE SOCIAL INSTAGRAM (IMMAGINE CUSTOM) */
+/* BOTTONE SOCIAL INSTAGRAM (CUSTOM E CENTRATO) */
 .btn-instagram-custom {
     display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px; /* Quadrato perfetto che hai chiesto */
+    align-items: center;      /* Centra verticalmente */
+    justify-content: center;  /* Centra orizzontalmente */
+    width: 60px;              /* Il quadrato esterno */
     height: 60px;
     background-color: transparent;
     border: 2px solid var(--border);
-    border-radius: 2px; /* Leggermente smussato, stile brutalista */
+    border-radius: 2px;
     transition: all 0.3s ease;
     margin-top: 0.5rem;
+    text-decoration: none;
 }
 
 .btn-instagram-custom img {
-    width: 40px; /* L'immagine sta dentro il quadrato lasciando un po' di respiro */
-    height: 40px;
-    object-fit: contain; /* Evita che la tua immagine si deformi */
+    width: 35px;              /* Grandezza del tuo logo interno */
+    height: 35px;
+    object-fit: contain;      /* Mantiene le proporzioni del tuo JPG */
+    display: block;           /* Elimina spazi fantasma sotto l'immagine */
+    margin: 0;
 }
 
-/* L'EFFETTO DI SELEZIONE: Bordo Rosso Eretica */
+/* EFFETTO HOVER: Il quadrato si accende di rosso */
 .btn-instagram-custom:hover {
-    border-color: var(--accent); /* Il bordo diventa rosso */
-    transform: translateY(-2px); /* Si solleva leggermente */
-    background-color: rgba(255, 62, 62, 0.05); /* Lievissimo riflesso rosso sul fondo */
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    background-color: rgba(255, 62, 62, 0.05);
 }
