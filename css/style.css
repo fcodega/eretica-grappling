@@ -503,22 +503,37 @@ footer {
     font-size: 1rem;
 }
 
-/* BOTTONE SOCIAL SOLO ICONA */
-.btn-social-icon {
+/* BOTTONE SOCIAL UFFICIALE INSTAGRAM */
+.btn-instagram-official {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 60px; /* Quadrato perfetto */
     height: 60px;
-    color: var(--fg);
+    background: transparent; /* Fondo trasparente di default */
     border: 2px solid var(--border);
+    border-radius: 2px; /* Angoli leggermente smussati */
     transition: all 0.3s ease;
     margin-top: 0.5rem;
+    overflow: hidden; /* Assicura che l'icona rimanga nel quadrato */
+    position: relative; /* Per posizionare il bordo rosso */
 }
 
-.btn-social-icon:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-    background-color: rgba(255, 62, 62, 0.05); /* Leggero riflesso rosso */
+/* Icona Instagram ufficiale (vettoriale) */
+.btn-instagram-official svg {
+    width: 32px; /* Dimensione dell'icona ufficiale all'interno */
+    height: 32px;
+    color: var(--muted); /* Default: muto */
+    transition: 0.3s ease;
+}
+
+/* EFFETTO DI SELEZIONE (Hover): Bordo Rosso Visibile */
+.btn-instagram-official:hover {
+    border-color: var(--accent); /* Il bordo esterno diventa rosso */
+    background-color: transparent; /* Fondo trasparente anche su hover */
     transform: translateY(-2px);
+}
+
+.btn-instagram-official:hover svg {
+    color: #E1306C; /* Cambia colore all'icona stessa su hover */
 }
