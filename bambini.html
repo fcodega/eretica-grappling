@@ -60,9 +60,12 @@
         <div class="logo">
             <a href="index.html">ERETICA</a>
         </div>
-        <nav>
+        
+        <button class="hamburger" id="hamburger-btn">☰</button>
+        
+        <nav id="mobile-nav">
             <a href="about.html">Chi Siamo</a>
-              <div class="dropdown">
+            <div class="dropdown">
                 <a href="javascript:void(0);" style="cursor: pointer;">Corsi & Orari ▾</a>
                 <div class="dropdown-content">
                     <a href="corsi.html">Adulti & Junior</a>
@@ -73,6 +76,7 @@
             <a href="prova.html" class="btn-nav">Prova Gratuita</a>
         </nav>
     </header>
+
 
     <main class="section-padding">
         <span class="section-tag">/ Next Gen</span>
@@ -130,6 +134,19 @@
             <p>DESIGNED FOR THE UNORTHODOX</p>
         </div>
     </footer>
+
+    <script>
+        const btn = document.getElementById('hamburger-btn');
+        const nav = document.getElementById('mobile-nav');
+        
+        if (btn && nav) {
+            btn.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                // Cambia l'icona da ☰ a ✕ quando è aperto
+                btn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+            });
+        }
+    </script>
 
 </body>
 </html>
