@@ -329,9 +329,21 @@ footer {
 }
 
 /* RESPONSIVE */
+
+
+/* HAMBURGER MENU (Nascosto su PC) */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--fg);
+    cursor: pointer;
+}
 /* -----------------------------------------------------------
    RESPONSIVE & MOBILE DESIGN (Max 768px)
    ----------------------------------------------------------- */
+
 @media (max-width: 768px) {
     /* 1. Spaziature e Griglie generali */
     .grid-2 { 
@@ -342,7 +354,7 @@ footer {
         padding: 4rem 5%; 
     }
     
-    /* 2. Hero Section (Testo più compatto) */
+    /* 2. Hero Section */
     .hero { 
         height: auto; 
         min-height: 80vh; 
@@ -350,31 +362,44 @@ footer {
         padding-bottom: 4rem; 
     }
     .hero h1 { 
-        font-size: 4rem; 
+        font-size: clamp(3rem, 15vw, 5rem); /* Dimensione dinamica per non sbordare */
         letter-spacing: -2px; 
         line-height: 0.9;
     }
 
-    /* 3. La Navigazione Mobile (Stack Brutalista) */
+    /* 3. La Navigazione Mobile (Hamburger Menu) */
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
         padding: 1rem 5%;
+        position: relative; /* Serve per far scendere il menu da qui */
     }
-    .logo { 
-        margin-bottom: 1.5rem; 
-        font-size: 1.5rem;
+    
+    .hamburger { 
+        display: block; /* Mostra l'icona su mobile */
     }
+    
     nav { 
-        display: flex; 
-        flex-direction: column; /* Impila i link verticalmente */
+        display: none; /* IL MENU E' NASCOSTO DI DEFAULT */
+        position: absolute;
+        top: 100%; /* Si apre esattamente sotto la barra nera */
+        left: 0;
         width: 100%;
-        gap: 1rem; 
+        background: rgba(0, 0, 0, 0.98);
+        flex-direction: column;
+        padding: 1rem 5% 2rem 5%;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0px 10px 20px rgba(0,0,0,0.8);
     }
+    
+    /* Questa classe viene aggiunta dal Javascript quando clicchi */
+    nav.active {
+        display: flex; 
+    }
+    
     nav a { 
-        font-size: 1rem; /* Più grande per essere cliccabile col pollice */
-        padding: 0.5rem 0;
+        font-size: 1.2rem; /* Testi grandi per le dita */
+        padding: 1rem 0;
         border-bottom: 1px solid #1a1a1a;
+        width: 100%;
     }
 
     /* 4. Gestione Tendina su Mobile */
@@ -398,13 +423,15 @@ footer {
         padding: 0.8rem 1rem;
         border-bottom: none;
         color: var(--muted);
+        font-size: 1rem;
     }
     
     /* 5. Tasto Prova Mobile */
     .btn-nav { 
         text-align: center; 
-        margin-top: 1rem; 
+        margin-top: 1.5rem; 
         padding: 1rem !important;
+        border: none;
     }
 
     /* 6. Tabelle Orari (Timetable) per Schermi Piccoli */
@@ -439,7 +466,6 @@ footer {
         min-height: 300px; 
     }
 }
-
 /* SEZIONE FAQ */
 .faq-container {
     margin-top: 6rem;
