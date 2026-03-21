@@ -37,7 +37,6 @@
     </header>
 
     <main class="section-padding">
-        <span class="section-tag">/ Headquarters</span>
         
         <div class="about-hero">
             <h1 style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; line-height: 0.9;">CHI SIAMO</h1>
@@ -54,19 +53,25 @@
             </div>
         </div>
 
-        <div style="text-align: center; padding: 6rem 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin: 6rem 0;">
-            <img src="assets/logo.jpg" alt="Sigillo Eretica" style="max-width: 250px; filter: grayscale(100%); opacity: 0.7;">
-            <p style="font-size: 0.7rem; color: #333; margin-top: 1rem;">SIGILLO_ERETICA (PAGAN/FOLK INSPIRED)</p>
-        </div>
-
-        <div class="grid-2">
-            <div>
-                <h3>Il Nostro Metodo</h3>
-                <p>Analisi. Pressione. Ripetizione. Ci alleniamo per capire i principi, non per memorizzare tecniche. Se una tecnica non funziona sotto massima pressione, per noi è solo folklore.</p>
+        <div class="section-padding">
+            <span class="section-tag">/ Istruttori</span>
+            <h2>I NOSTRI COACH.</h2>
+            
+            <div class="coach-photo-container" style="border: 4px solid #1a1a1a; transition: 0.3s ease; max-width: 100%; margin-top: 2rem; overflow: hidden;" onmouseover="this.style.borderColor='var(--accent)';" onmouseout="this.style.borderColor='#1a1a1a';">
+                <img src="assets/coach.jpg" alt="Francesco Codega e Jacopo Silvestri" style="width: 100%; height: auto; display: block;">
             </div>
-            <div>
-                <h3>La Nostra Etica</h3>
-                <p>Rispetto reciproco, connessione e sicurezza. Eretica è un luogo dove si impara a controllare l'aggressione e a collaborare per la crescita tecnica di tutti i membri.</p>
+
+            <p style="color: var(--muted); max-width: 800px; margin-top: 4rem; margin-bottom: 6rem;">Dopo anni di esperienza e competizione a Milano, Francesco e Jacopo sono tornati in Valtellina con un obiettivo chiaro: fondare un laboratorio di lotta dedito all'efficienza pura e allo studio empirico della lotta. Eretica Grappling è il risultato di questa visione.</p>
+
+            <div class="grid-2">
+                <div class="text-block">
+                    <h3>FRANCESCO CODEGA</h3>
+                    <p>inizia nel 2017 in Milanimal, prende la nera a febbraio 2025 da Marco Bancone nel nostro Stance HQ di Milano. Anni di BJJ e competizioni che gli hanno permesso di affinare la tecnica e sviluppare le idee che vengono quotidinamente portate sul tatami.</p>
+                </div>
+                <div class="text-block">
+                    <h3>JACOPO SILVESTRI</h3>
+                    <p>Inizia nel 2014 sotto Cabecinha, prende la cintura nera da Marco Bancone a febbraio 2024. Head Coach, anni di BJJ e competizioni gli hanno permesso di affinare la tecnica e sviluppare le idee portate quotidinamente sul tatami.</p>
+                </div>
             </div>
         </div>
 
@@ -82,7 +87,6 @@
     </footer>
 
     <script>
-        // Gestione apertura/chiusura Menu Mobile (Hamburger)
         const btn = document.getElementById('hamburger-btn');
         const nav = document.getElementById('mobile-nav');
         
@@ -90,20 +94,6 @@
             btn.addEventListener('click', () => {
                 nav.classList.toggle('active');
                 btn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
-            });
-        }
-
-        // Gestione apertura/chiusura Tendina "Corsi & Orari" su Mobile
-        const dropdownLink = document.querySelector('.dropdown > a');
-        const dropdown = document.querySelector('.dropdown');
-        
-        if (dropdownLink && dropdown) {
-            dropdownLink.addEventListener('click', (e) => {
-                // Solo se siamo su schermi piccoli (mobile)
-                if (window.innerWidth <= 768) {
-                    e.preventDefault(); // Evita strani salti della pagina
-                    dropdown.classList.toggle('open');
-                }
             });
         }
     </script>
