@@ -130,40 +130,37 @@
             </table>
 
             <div class="maat-box">
-                <h3 style="margin-bottom: 0.5rem; text-transform: uppercase;">Prenota la classe di prova</h3>
-                <p style="color: var(--muted); font-size: 0.9rem;">Contattaci tramite il modulo dedicato o usa l'app ufficiale <strong>MAAT</strong> per iscrivere tuo figlio alla classe.</p>
+                <div style="margin-bottom: 4rem;">
+                    <h3 style="margin-bottom: 0.5rem; text-transform: uppercase;">Prenota la classe di prova</h3>
+                    <p style="color: var(--muted); font-size: 0.9rem;">Contattaci tramite il modulo dedicato o usa l'app ufficiale <strong>MAAT</strong> per iscrivere tuo figlio alla classe.</p>
+                </div>
+
+                <div class="faq-container">
+                    <span class="section-tag">/ Parents Info</span>
+                    <h2 style="margin-bottom: 2rem; color: var(--fg);">FAQ GENITORI</h2>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">Cos'è il Brazilian Jiu Jitsu? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>È una disciplina di lotta non violenta. A differenza di altre arti marziali, non prevede calci o pugni, rendendola estremamente sicura e formativa per i bambini.</p></div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">Perché è perfetto per lo sviluppo motorio e caratteriale? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Motorio: sviluppa coordinazione, equilibrio e propriocezione. Caratteriale: insegna la disciplina, il rispetto del compagno e la gestione della sconfitta come momento di crescita.</p></div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">I bambini possono fare gare? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Sì, esistono tornei specifici per bambini dove l'enfasi è sul gioco e sullo spirito sportivo. La partecipazione è sempre facoltativa e concordata con gli istruttori.</p></div>
+                    </div>
+            
+                    <div class="faq-item">
+                        <button class="faq-question">Mio figlio è timido, può aiutarlo? <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><p>Assolutamente. Il contatto fisico controllato e il superamento delle sfide sul tatami sono i migliori strumenti per costruire una sana fiducia in se stessi.</p></div>
+                    </div>
+                </div>
             </div>
         </div>
-
-    
-        <section class="section-padding">
-    <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-        <span class="section-tag">/ Parents Info</span>
-        <h2 style="margin-bottom: 3rem;">FAQ GENITORI</h2>
-
-        <div class="faq-item">
-            <button class="faq-question">Cos'è il Brazilian Jiu Jitsu? <span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>È una disciplina di lotta non violenta. A differenza di altre arti marziali, non prevede calci o pugni, rendendola estremamente sicura e formativa per i bambini.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">Perché è perfetto per lo sviluppo motorio e caratteriale? <span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Motorio: sviluppa coordinazione, equilibrio e propriocezione. Caratteriale: insegna la disciplina, il rispetto del compagno e la gestione della sconfitta come momento di crescita.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">I bambini possono fare gare? <span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Sì, esistono tornei specifici per bambini dove l'enfasi è sul gioco e sullo spirito sportivo. La partecipazione è sempre facoltativa e concordata con gli istruttori.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <button class="faq-question">Mio figlio è timido, può aiutarlo? <span class="faq-icon">+</span></button>
-            <div class="faq-answer"><p>Assolutamente. Il contatto fisico controllato e il superamento delle sfide sul tatami sono i migliori strumenti per costruire una sana fiducia in se stessi.</p></div>
-        </div>
-    </div>
-    </section>
-    
-
     </main>
 
     <footer>
@@ -176,10 +173,9 @@
     </footer>
 
     <script>
-        // Gestione apertura/chiusura Menu Mobile (Hamburger)
+        // Hamburger Menu
         const btn = document.getElementById('hamburger-btn');
         const nav = document.getElementById('mobile-nav');
-        
         if (btn && nav) {
             btn.addEventListener('click', () => {
                 nav.classList.toggle('active');
@@ -187,20 +183,30 @@
             });
         }
 
-        // Gestione apertura/chiusura Tendina "Corsi & Orari" su Mobile
+        // Dropdown Mobile
         const dropdownLink = document.querySelector('.dropdown > a');
         const dropdown = document.querySelector('.dropdown');
-        
         if (dropdownLink && dropdown) {
             dropdownLink.addEventListener('click', (e) => {
-                // Solo se siamo su schermi piccoli (mobile)
                 if (window.innerWidth <= 768) {
-                    e.preventDefault(); // Evita strani salti della pagina
+                    e.preventDefault();
                     dropdown.classList.toggle('open');
                 }
             });
         }
-    </script>
 
+        // FUNZIONE FAQ
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                faqItem.classList.toggle('active');
+                
+                // Opzionale: chiude le altre quando ne apri una
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (item !== faqItem) item.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
