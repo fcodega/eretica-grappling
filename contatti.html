@@ -34,7 +34,7 @@
             letter-spacing: 2px;
         }
         
-        .contact-info p, .contact-info a {
+        .contact-info p, .contact-info a.main-link {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
@@ -44,7 +44,7 @@
             line-height: 1.2;
         }
 
-        .contact-info a:hover {
+        .contact-info a.main-link:hover {
             color: var(--accent);
         }
 
@@ -117,13 +117,16 @@
                 <h3>Dove lottiamo</h3>
                 <p>Via Largo Sindelfingen 13<br>23100 Sondrio (SO)</p>
                 
-                <h3>Telefono</h3>
-                <a href="tel:+39[INSERISCI TUO NUMERO]">
-                    +39 3465417684 <span style="font-size: 1rem; color: var(--muted); font-weight: 400; vertical-align: middle;">(Francesco)</span>
+                <h3>Telefono & WhatsApp</h3>
+                <a href="tel:+39 3465417684" class="main-link" style="margin-bottom: 0.5rem;">
+                    +39 3465417684 <span style="font-size: 1rem; color: var(--muted); font-weight: 400; vertical-align: middle;">(Jacopo)</span>
+                </a>
+                <a href="https://wa.me/393465417684?text=Sono%20interessato%20al%20corso%20di%20BJJ%20%26%20Grappling%20presso%20Eretica" target="_blank" style="font-size: 0.9rem; font-weight: 700; color: var(--fg); text-decoration: none; border: 1px solid var(--border); padding: 0.5rem 1rem; display: inline-block; margin-bottom: 2rem; text-transform: uppercase; transition: 0.3s ease;" onmouseover="this.style.borderColor='var(--accent)'; this.style.color='var(--accent)';" onmouseout="this.style.borderColor='var(--border)'; this.style.color='var(--fg)';">
+                    Apri Chat WhatsApp ↗
                 </a>
 
                 <h3>Email</h3>
-                <a href="mailto:eretica.grappling@gmail.com">eretica.grappling@gmail.com</a>
+                <a href="mailto:eretica.grappling@gmail.com" class="main-link">eretica.grappling@gmail.com</a>
 
                 <h3>Social</h3>
                 <a href="https://www.instagram.com/ereticajiujitsu/" target="_blank" class="btn-instagram-custom" aria-label="Instagram Eretica">
