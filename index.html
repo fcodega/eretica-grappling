@@ -15,26 +15,29 @@
 </head>
 <body>
 
-  <header class="navbar">
-          <div class="logo">
-              <a href="index.html">ERETICA</a>
-          </div>
-          
-          <button class="hamburger" id="hamburger-btn">☰</button>
-          
-          <nav id="mobile-nav">
-              <a href="about.html">Chi Siamo</a>
-              <div class="dropdown">
-                  <a href="javascript:void(0);" style="cursor: pointer;">Corsi & Orari ▾</a>
-                  <div class="dropdown-content">
-                      <a href="corsi.html">Adulti & Junior</a>
-                      <a href="bambini.html">Bambini</a>
-                  </div>
-              </div>
-              <a href="contatti.html">Dove Siamo</a>
-              <a href="prova.html" class="btn-nav">Prova Gratuita</a>
-          </nav>
-      </header>
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: var(--fg);">
+                <img src="assets/logo_small.jpg" alt="Logo Eretica" style="height: 28px; width: auto; margin-right: 12px; filter: grayscale(100%); transition: 0.3s ease;">
+                ERETICA
+            </a>
+        </div>
+        
+        <button class="hamburger" id="hamburger-btn">☰</button>
+        
+        <nav id="mobile-nav">
+            <a href="about.html">Chi Siamo</a>
+            <div class="dropdown">
+                <a href="javascript:void(0);" style="cursor: pointer;">Corsi & Orari ▾</a>
+                <div class="dropdown-content">
+                    <a href="corsi.html">Adulti & Junior</a>
+                    <a href="bambini.html">Bambini</a>
+                </div>
+            </div>
+            <a href="contatti.html">Dove Siamo</a>
+            <a href="prova.html" class="btn-nav">Prova Gratuita</a>
+        </nav>
+    </header>
 
     <main>
         <section class="hero">
@@ -45,7 +48,11 @@
                     <a href="prova.html" class="btn-main">Inizia il tuo percorso</a>
                 </div>
             </div>
-        </section>
+        </section> <div class="manifesto-block">
+            <p class="manifesto-text">
+                "Eretico, dal greco, è colui che sceglie e <span class="highlight">sceglie liberamente</span>. Eretico è chi segue la propria strada, non quella della massa; chi cerca prima i <span class="highlight">fatti</span>, poi le parole."
+            </p>
+        </div>
 
         <section class="section-padding bg-dark">
             <span class="section-tag">/ Headquarters</span>
@@ -92,7 +99,6 @@
     </footer>
   
     <script>
-        // Gestione apertura/chiusura Menu Mobile (Hamburger)
         const btn = document.getElementById('hamburger-btn');
         const nav = document.getElementById('mobile-nav');
         
@@ -103,15 +109,13 @@
             });
         }
 
-        // Gestione apertura/chiusura Tendina "Corsi & Orari" su Mobile
         const dropdownLink = document.querySelector('.dropdown > a');
         const dropdown = document.querySelector('.dropdown');
         
         if (dropdownLink && dropdown) {
             dropdownLink.addEventListener('click', (e) => {
-                // Solo se siamo su schermi piccoli (mobile)
                 if (window.innerWidth <= 768) {
-                    e.preventDefault(); // Evita strani salti della pagina
+                    e.preventDefault(); 
                     dropdown.classList.toggle('open');
                 }
             });

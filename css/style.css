@@ -328,6 +328,33 @@ footer {
     font-weight: 700;
 }
 
+/* BLOCCO MANIFESTO (HOME PAGE) */
+.manifesto-block {
+    padding: 6rem 2rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background-color: var(--bg);
+    margin: 2rem 0;
+}
+
+.manifesto-text {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.2;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--fg);
+    font-style: italic;
+    letter-spacing: -1px;
+}
+
+/* Evidenzia parole chiave in rosso */
+.manifesto-text .highlight {
+    color: var(--accent);
+}
+
 /* RESPONSIVE */
 
 
