@@ -9,8 +9,8 @@
 
     <meta property="og:title" content="ERETICA | No Dogma. Just Mechanics.">
     <meta property="og:description" content="Laboratorio di Brazilian Jiu Jitsu e Grappling a Sondrio.">
-    <meta property="og:image" content="https://https://fcodega.github.io/eretica-grappling/assets/logoIG_black.jpg">
-    <meta property="og:url" content="https://https://fcodega.github.io/eretica-grappling/">
+    <meta property="og:image" content="https://fcodega.github.io/eretica-grappling/assets/logoIG_black.jpg">
+    <meta property="og:url" content="https://fcodega.github.io/eretica-grappling/">
     <meta property="og:type" content="website">
     
     <meta name="theme-color" content="#FF3E3E">
@@ -58,31 +58,25 @@
             filter: invert(90%) hue-rotate(180deg) contrast(100%); 
         }
 
-        /* Bottone Social Eretica */
-        .btn-social {
-            display: inline-flex;
-            align-items: center;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--fg) !important;
-            text-decoration: none !important;
+        /* Stile Custom per il Quadrato Instagram */
+        .btn-instagram-custom {
+            display: inline-block;
+            width: 100px; /* Dimensione del quadrato */
+            height: 100px;
+            overflow: hidden;
             border: 2px solid var(--border);
-            padding: 1rem 2rem;
-            margin-top: 0.5rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            transition: border-color 0.3s ease;
         }
 
-        .btn-social:hover {
+        .btn-instagram-custom:hover {
             border-color: var(--accent);
-            color: var(--accent) !important;
-            background-color: rgba(255, 62, 62, 0.05); /* Leggero riflesso rosso */
-            transform: translateY(-2px);
         }
-        
-        .btn-social svg {
-            margin-right: 12px;
+
+        .btn-instagram-custom img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Forza l'immagine a riempire il quadrato */
+            display: block;
         }
     </style>
 </head>
@@ -122,9 +116,14 @@
             <div class="contact-info">
                 <h3>Dove lottiamo</h3>
                 <p>Via Largo Sindelfingen 13<br>23100 Sondrio (SO)</p>
+                
+                <h3>Telefono</h3>
+                <a href="tel:+39[INSERISCI TUO NUMERO]">
+                    +39 3465417684 <span style="font-size: 1rem; color: var(--muted); font-weight: 400; vertical-align: middle;">(Francesco)</span>
+                </a>
 
                 <h3>Email</h3>
-                <a href="mailto:info@ereticagrappling.it">eretica.grappling@gmail.com</a>
+                <a href="mailto:eretica.grappling@gmail.com">eretica.grappling@gmail.com</a>
 
                 <h3>Social</h3>
                 <a href="https://www.instagram.com/ereticajiujitsu/" target="_blank" class="btn-instagram-custom" aria-label="Instagram Eretica">
