@@ -61,12 +61,12 @@
                         
                         <div class="form-group">
                             <label>NOME COMPLETO</label>
-                            <input type="text" name="Nome" placeholder="Es. Mario Rossi" required>
+                            <input type="text" name="Nome" placeholder="Es. Mario Rossi" required pattern="[A-Za-zÀ-ÿ\s']+" title="Inserisci solo lettere. Niente simboli.">
                         </div>
                                                 
                         <div class="form-group">
                             <label>ANNI</label>
-                            <input type="text" name="Age" required>
+                            <input type="number" name="Age" min="4" max="99" required title="Inserisci un'età numerica valida.">
                         </div>
                         
                         <div class="form-group">
@@ -95,7 +95,7 @@
 
                         <div class="form-group">
                             <label>MESSAGGIO (FACOLTATIVO)</label>
-                            <textarea name="Messaggio" rows="4" placeholder="Eventuali infortuni o obiettivi specifici..."></textarea>
+                            <textarea id="messaggio" name="Messaggio" rows="4" placeholder="Eventuali infortuni o obiettivi specifici..."></textarea>
                         </div>
 
                         <button type="submit" class="btn-main" style="border:none; cursor:pointer; width:100%;">Invia Richiesta</button>
@@ -163,6 +163,18 @@
                 if (window.innerWidth <= 768) {
                     e.preventDefault(); // Evita strani salti della pagina
                     dropdown.classList.toggle('open');
+                }
+            });
+        }
+
+        // Blocco di sicurezza anti-XSS per il modulo
+        const form = document.querySelector("form");
+        if (form) {
+            form.addEventListener("submit", function(event) {
+                let messaggioInput = document.getElementById("messaggio");
+                if (messaggioInput && (messaggioInput.value.includes("<") || messaggioInput.value.includes(">"))) {
+                    event.preventDefault();
+                    alert("Errore: Caratteri non consentiti (< >) nel messaggio. Scrivi solo testo normale.");
                 }
             });
         }

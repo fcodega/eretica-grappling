@@ -530,6 +530,8 @@ footer {
     font-size: 1rem;
 }
 
+
+
 /* BOTTONE SOCIAL INSTAGRAM (CUSTOM E CENTRATO) */
 .btn-instagram-custom {
     display: inline-flex;
@@ -594,7 +596,7 @@ footer {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px; /* Altezza sufficiente per il testo */
+    max-height: 1500px; /* Limite gigante per non tagliare mai su mobile */
     padding-bottom: 1.5rem;
 }
 
