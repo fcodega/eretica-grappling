@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROVA GRATUITA | ERETICA BJJ & Grappling a Sondrio.</title>
+    <title>PROVA GRATUITA | ERETICA BJJ, Grappling e Lotta a Sondrio.</title>
 
     <meta name="description" content="Prenota la tua lezione di prova gratuita da Eretica a Sondrio.">
     
     <meta property="og:title" content="PROVA GRATUITA | ERETICA BJJ & Grappling a Sondrio.">
     <meta property="og:description" content="Prenota la tua lezione di prova gratuita da Eretica a Sondrio.">
     <meta property="og:image" content="https://fcodega.github.io/eretica-grappling/assets/logo_small.jpg">
-    <meta property="og:url" content="https://fcodega.github.io/eretica-grappling/">
+    <meta property="og:url" content="https://ereticajiujitsu.com/">
     <meta property="og:type" content="website">
     
     <meta name="theme-color" content="#FF3E3E">
@@ -167,13 +167,22 @@
             });
         }
 
-        // Blocco di sicurezza anti-XSS per il modulo
+        // 1. GHIGLIOTTINA IN TEMPO REALE SUL NOME (Impedisce di digitare simboli/numeri)
+        const nomeInput = document.querySelector('input[name="Nome"]');
+        if (nomeInput) {
+            nomeInput.addEventListener('input', function(e) {
+                // Sostituisce all'istante tutto ciò che NON è una lettera, spazio o apostrofo con il nulla
+                this.value = this.value.replace(/[^A-Za-zÀ-ÿ\s']/g, '');
+            });
+        }
+
+        // 2. BLOCCO DI SICUREZZA ANTI-XSS SULLA TEXTAREA (Al momento dell'invio)
         const form = document.querySelector("form");
         if (form) {
             form.addEventListener("submit", function(event) {
                 let messaggioInput = document.getElementById("messaggio");
                 if (messaggioInput && (messaggioInput.value.includes("<") || messaggioInput.value.includes(">"))) {
-                    event.preventDefault();
+                    event.preventDefault(); // Blocca l'invio
                     alert("Errore: Caratteri non consentiti (< >) nel messaggio. Scrivi solo testo normale.");
                 }
             });
