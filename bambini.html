@@ -3,76 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CORSO BAMBINI | ERETICA BJJ & Grappling a Sondrio.</title>
-    
-    <meta name="description" content="Corso di Brazilian Jiu Jitsu (BJJ) per bambini a Sondrio.">
+    <title>BJJ per bambini a Sondrio, dai 5 anni | ERETICA</title>
 
-    <meta property="og:description" content="Laboratorio di Brazilian Jiu Jitsu e Grappling a Sondrio.">
-    <meta property="og:image" content="https://fcodega.github.io/eretica-grappling/assets/logo_small.jpg">
-    <meta property="og:url" content="https://fcodega.github.io/eretica-grappling/">
+    <meta name="description" content="Corso di Brazilian Jiu Jitsu per bambini a Sondrio, dai 5 anni: niente calci né pugni, solo lotta a terra guidata. Martedì e giovedì, prima lezione gratuita.">
+    <link rel="canonical" href="https://ereticajiujitsu.com/bambini.html">
+
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="ERETICA Jiu Jitsu">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="BJJ per bambini a Sondrio, dai 5 anni | ERETICA">
+    <meta property="og:description" content="Un'arte marziale senza calci né pugni, dai 5 anni. Martedì e giovedì alle 17:30 a Sondrio. Prima lezione gratuita.">
+    <meta property="og:url" content="https://ereticajiujitsu.com/bambini.html">
+    <meta property="og:image" content="https://ereticajiujitsu.com/assets/og-bambini.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lezione di Brazilian Jiu Jitsu con il kimono da Eretica, Sondrio">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="icon" type="image/jpeg" href="assets/logo_small.jpg">
-    <link rel="apple-touch-icon" href="assets/logo_small.jpg">
-    
+    <meta name="theme-color" content="#FF3E3E">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/watermark.js" defer></script>
 
-    <style>
-        .timetable {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 3rem;
-            font-size: 0.9rem;
-        }
-        .timetable th, .timetable td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border);
-            text-align: left;
-            vertical-align: top;
-        }
-        .timetable th {
-            color: var(--muted);
-            width: 15%;
-            font-weight: 900;
-        }
-        .time-block {
-            display: inline-block;
-            margin-right: 2rem;
-            margin-bottom: 0.5rem;
-        }
-        .time { font-weight: 900; letter-spacing: 1px; }
-        .type { color: var(--accent); font-weight: 700; margin-left: 0.5rem; }
-        .level { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
-        
-        .maat-box {
-            background: #111;
-            padding: 2rem;
-            margin-top: 4rem;
-            border-left: 4px solid var(--accent);
-        }
-
-        @media (max-width: 768px) {
-            .timetable th, .timetable td { display: block; width: 100%; padding: 1rem 0; }
-            .timetable th { border-bottom: none; padding-bottom: 0; }
-            .time-block { display: block; margin-bottom: 1rem; }
-        }
-    </style>
 </head>
 <body>
 
     <header class="navbar">
         <div class="logo">
             <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: var(--fg);">
-                <img src="assets/logo_small.jpg" alt="Logo Eretica" style="height: 28px; width: auto; margin-right: 12px; filter: grayscale(100%); transition: 0.3s ease;">
+                <img src="assets/logo-nav.png" alt="" width="27" height="28" style="height: 28px; width: auto; margin-right: 12px; filter: grayscale(100%); transition: 0.3s ease;">
                 ERETICA
             </a>
         </div>
         
-        <button class="hamburger" id="hamburger-btn">☰</button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
         
         <nav id="mobile-nav">
             <a href="about.html">Chi Siamo</a>
@@ -89,12 +60,27 @@
     </header>
 
     <main class="section-padding">
-        <span class="section-tag">/ Next Gen</span>
-        <h1 style="font-size: clamp(3rem, 10vw, 8rem); font-weight: 900; line-height: 0.9;">KIDS CLASS</h1>
-        <p style="color: var(--muted); max-width: 600px; margin-top: 1.5rem;">Costruiamo le fondamenta del movimento e della disciplina in un ambiente controllato. Il corso bambini si concentra esclusivamente sulla pratica con il kimono.</p>
+        <span class="section-tag">/ Corso bambini</span>
+        <h1 style="font-size: clamp(2.6rem, 9vw, 6rem); font-weight: 900; line-height: 0.9;">BJJ PER<br>BAMBINI</h1>
+        <p style="color: var(--muted); max-width: 640px; margin-top: 1.5rem; font-size: 1.1rem;">
+            Un'arte marziale senza calci né pugni, a partire dai 5 anni. I bambini sviluppano coordinazione
+            ed equilibrio, imparano il rispetto del compagno e scoprono che a un problema si può rispondere
+            con la logica invece che con la forza. Martedì e giovedì alle 17:30, nel centro di Sondrio.
+        </p>
 
-        <div class="grid-courses" style="margin-top: 4rem;">
-            <div class="course-card">
+        <div style="margin-top: 2.5rem;">
+            <a href="prova.html" class="btn-main">Prenota una lezione di prova gratuita</a>
+        </div>
+
+        <div class="grid-2" style="margin-top: 5rem; align-items: center;">
+            <div>
+                <div class="photo-frame" style="max-width: 420px;">
+                    <img src="assets/tatami-web.jpg" width="800" height="1162" loading="lazy" decoding="async"
+                         alt="Lezione di Brazilian Jiu Jitsu con il kimono nella sede di Eretica a Sondrio">
+                </div>
+                <p class="photo-caption">La sala di Largo Sindelfingen 13, dove si allenano anche i bambini</p>
+            </div>
+            <div class="course-card" style="background: var(--card-bg); border: 1px solid var(--border);">
                 <span class="section-tag">/ GI</span>
                 <h3>Brazilian Jiu Jitsu</h3>
                 <p>La lotta come strumento di educazione. Aiutiamo i più piccoli a sviluppare coordinazione motoria, rispetto reciproco e fiducia nei propri mezzi. Niente colpi, solo lotta a terra strutturata come un gioco di logica e controllo.</p>
@@ -134,45 +120,58 @@
                     <h2 style="margin-bottom: 2rem; color: var(--fg);">FAQ GENITORI</h2>
             
                     <div class="faq-item">
-                        <button class="faq-question">Cos'è il Brazilian Jiu Jitsu? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">Cos'è il Brazilian Jiu Jitsu? <span class="faq-icon">+</span></button>
                         <div class="faq-answer"><p>Nato quasi un secolo fa come evoluzione delle antiche tecniche di lotta dei samurai giapponesi trapiantate in Brasile, il Brazilian Jiu Jitsu è oggi considerato il metodo di difesa personale più efficace al mondo. A differenza di molte altre arti marziali, nel BJJ non si usano calci o pugni: è una disciplina basata interamente sul controllo e sull'intelligenza motoria. Insegniamo ai bambini come risolvere situazioni di conflitto usando la logica, le leve e l'astuzia invece della forza bruta. Questo approccio rende la pratica estremamente sicura, divertente e profondamente formativa per il carattere e la fiducia in se stessi.</p></div>
                     </div>
             
                     <div class="faq-item">
-                        <button class="faq-question">Perché è perfetto per lo sviluppo motorio e caratteriale? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">Perché è perfetto per lo sviluppo motorio e caratteriale? <span class="faq-icon">+</span></button>
                         <div class="faq-answer"><p>Motorio: sviluppa coordinazione, equilibrio e propriocezione. Caratteriale: insegna la disciplina, il rispetto del compagno e la gestione della sconfitta come momento di crescita.</p></div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">A partire da che età posso portare mio figlio? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">A partire da che età posso portare mio figlio? <span class="faq-icon">+</span></button>
                         <div class="faq-answer"><p>Tendenzialmente i corsi dei bambini sono adatti a partire dai 5 anni.</p></div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">È un corso adatto anche alle bambine? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">È un corso adatto anche alle bambine? <span class="faq-icon">+</span></button>
                         <div class="faq-answer"><p>Senza alcun dubbio. Insegnare a una bambina a non temere il contatto fisico, a gestire il proprio spazio e a sapersi difendere usando la logica è uno dei più grandi regali che un genitore possa farle. Sul tatami non esistono stereotipi: le bambine lottano alla pari, imparano il rispetto reciproco e costruiscono fin da piccole un carattere d'acciaio e una profonda fiducia in se stesse.</p></div>
                     </div>
 
                     <div class="faq-item">
-                        <button class="faq-question">Mio figlio è timido, può aiutarlo? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">Mio figlio è timido, può aiutarlo? <span class="faq-icon">+</span></button>
                         <div class="faq-answer"><p>Assolutamente. Il contatto fisico controllato e il superamento delle sfide sul tatami sono i migliori strumenti per costruire una sana fiducia in se stessi.</p></div>
                     </div>
             
                     <div class="faq-item">
-                        <button class="faq-question">I bambini possono fare gare? <span class="faq-icon">+</span></button>
+                        <button class="faq-question" aria-expanded="false">I bambini possono fare gare? <span class="faq-icon">+</span></button>
                         <div class="faq-answer"><p>Sì, esistono tornei specifici per bambini dove l'enfasi è sul gioco e sullo spirito sportivo. La partecipazione è sempre facoltativa e concordata con gli istruttori.</p></div>
                     </div>
             
 
                 </div>
+
+                <p style="color: var(--muted); font-size: 0.9rem; margin-top: 2.5rem; max-width: 620px;">
+                    Eretica ha adottato un modello organizzativo per la tutela dei minori e un codice etico,
+                    con un responsabile dedicato a cui segnalare qualsiasi problema.
+                    <a href="documenti.html" style="color: var(--fg); font-weight: 700;">Puoi leggerli qui</a>.
+                </p>
             </div>
         </div> 
+
+        <div class="maat-box" style="margin-top: 4rem; padding: 3rem 2rem;">
+            <h2 style="font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 900; text-transform: uppercase; margin-bottom: 1rem;">Portalo a provare</h2>
+            <p style="color: var(--muted); max-width: 560px; margin-bottom: 2rem;">La prima lezione è gratuita. Puoi restare a bordo tatami a guardare: in un'ora capisci se è l'ambiente giusto per tuo figlio.</p>
+            <a href="prova.html" class="btn-main">Prenota la lezione gratuita</a>
+        </div>
     </main>
 
     <footer>
         <div class="footer-left">
-            <p>© 2026 ERETICA<br>Via Largo Sindelfingen 13, Sondrio (SO)</p>
+            <p>© 2026 ERETICA<br>Largo Sindelfingen 13, Sondrio (SO)</p>
             <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">Corsi di BJJ, Grappling, Submission Wrestling e Lotta a Sondrio.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;"><a href="privacy.html" style="color: #666; text-decoration: none; border-bottom: 1px solid #333;">Informativa privacy</a> · <a href="documenti.html" style="color: #666; text-decoration: none; border-bottom: 1px solid #333;">Documenti e trasparenza</a></p>
         </div>
         <div class="footer-right">
             <p>DESIGNED FOR THE UNORTHODOX</p>
@@ -185,8 +184,10 @@
         const nav = document.getElementById('mobile-nav');
         if (btn && nav) {
             btn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-                btn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+                const open = nav.classList.toggle('active');
+                btn.innerHTML = open ? '✕' : '☰';
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
             });
         }
 
@@ -206,14 +207,24 @@
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const faqItem = button.parentElement;
-                faqItem.classList.toggle('active');
-                
+
                 // Chiude le altre quando ne apri una
                 document.querySelectorAll('.faq-item').forEach(item => {
-                    if (item !== faqItem) item.classList.remove('active');
+                    if (item !== faqItem) {
+                        item.classList.remove('active');
+                        const other = item.querySelector('.faq-question');
+                        if (other) other.setAttribute('aria-expanded', 'false');
+                    }
                 });
+
+                const open = faqItem.classList.toggle('active');
+                button.setAttribute('aria-expanded', open ? 'true' : 'false');
             });
         });
     </script>
+
+    <a class="wa-float" href="https://wa.me/393465417684?text=Ciao%21%20Vorrei%20informazioni%20sul%20corso%20bambini." target="_blank" rel="noopener"
+       aria-label="Scrivici su WhatsApp"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span>Scrivici su WhatsApp</span></a>
+
 </body>
 </html>

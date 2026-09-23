@@ -39,19 +39,28 @@ body {
 body::before {
     content: "";
     position: fixed; /* Rimane fermo mentre scorri */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centra perfettamente */
-    width: 80%; /* Grandezza del logo rispetto allo schermo */
-    height: 80%;
-    background-image: url('https://www.bjjee.com/wp-content/uploads/2023/12/gordon-ryan-guard-pass-.jpeg'); /* Percorso del tuo logo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* Sfondo. La prima scelta e' l'immagine remota qui sotto, che NON e' nostra:
+       se non carica, js/watermark.js riscrive la variabile --wm e si passa alla
+       foto di Francesco e Jacopo (assets/watermark-coach2.jpg).
+       Altre alternative locali gia' pronte: watermark-lotta2.jpg (foto di gara),
+       watermark.png (il logo). */
+    background-image: var(--wm, url('https://www.bjjee.com/wp-content/uploads/2023/12/gordon-ryan-guard-pass-.jpeg'));
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain; /* Adatta il logo senza tagliarlo */
-    
+    background-size: cover; /* riempie lo schermo, niente riquadro coi bordi netti */
+
+    /* I bordi sfumano nel nero, cosi' la foto non taglia di netto */
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 25%, transparent 72%);
+    mask-image: radial-gradient(ellipse at center, #000 25%, transparent 72%);
+
     /* L'EFFETTO DISSOLVENZA */
-    opacity: 0.5; /* Imposta la trasparenza (0.01 = quasi invisibile, 0.1 = molto visibile) */
-    
+    opacity: 0.38; /* Unico numero da toccare per farla più o meno visibile */
+
     filter: grayscale(100%); /* Lo rende monocromatico se non lo è già */
     z-index: -1; /* Lo mette sotto a tutto il testo */
     pointer-events: none; /* Non interferisce con i clic */
@@ -169,7 +178,7 @@ nav a:hover {
         to right, 
         rgba(0, 0, 0, 0.9) 10%, 
         rgba(0, 0, 0, 0.4) 100%
-    ), url('../assets/anto.jpg');
+    ), url('../assets/hero-bg.jpg');
     
     background-size: cover;
     background-position: center center;
@@ -662,4 +671,222 @@ footer {
     border: 2px solid var(--border);
     background: white; /* I QR code hanno bisogno di sfondo bianco per funzionare bene */
     padding: 10px;
+}
+/* -----------------------------------------------------------
+   ORARI (spostato qui da corsi.html e bambini.html, era duplicato)
+   ----------------------------------------------------------- */
+.timetable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+.timetable th, .timetable td {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+    vertical-align: top;
+}
+
+.timetable th {
+    color: var(--muted);
+    width: 15%;
+    font-weight: 900;
+}
+
+.time-block {
+    display: inline-block;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.time { font-weight: 900; letter-spacing: 1px; }
+.type { color: var(--accent); font-weight: 700; margin-left: 0.5rem; }
+.level { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+
+.maat-box {
+    background: #111;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-left: 4px solid var(--accent);
+}
+
+@media (max-width: 768px) {
+    .timetable th, .timetable td { display: block; width: 100%; padding: 1rem 0; }
+    .timetable th { border-bottom: none; padding-bottom: 0; }
+    .time-block { display: block; margin-bottom: 1rem; }
+}
+
+/* -----------------------------------------------------------
+   FOTO INQUADRATE
+   ----------------------------------------------------------- */
+.photo-frame {
+    border: 4px solid #1a1a1a;
+    transition: border-color 0.3s ease;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.photo-frame:hover { border-color: var(--accent); }
+.photo-frame img { width: 100%; height: auto; display: block; }
+
+.photo-caption {
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 0.8rem;
+}
+
+/* -----------------------------------------------------------
+   BLOCCO RASSICURAZIONE (pagina prova)
+   ----------------------------------------------------------- */
+.reassure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    margin: 3rem 0 4rem 0;
+}
+
+.reassure-card {
+    background: var(--bg);
+    padding: 2.5rem 2rem;
+}
+
+.reassure-card h3 {
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--fg);
+}
+
+.reassure-card p {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.lead-line {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.15;
+    margin-top: 1rem;
+}
+
+.lead-line .highlight { color: var(--accent); }
+
+/* -----------------------------------------------------------
+   FORM: note, privacy, esito invio, honeypot
+   ----------------------------------------------------------- */
+.form-note {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-top: -1.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.form-consent input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+}
+
+.form-consent a { color: var(--fg); }
+
+/* Campo trappola per i bot: invisibile agli umani, compilato dagli spambot */
+.hp {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.form-status {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-left: 4px solid var(--accent);
+    background: var(--card-bg);
+    font-size: 0.95rem;
+    color: var(--fg);
+}
+
+.form-status.is-error { border-left-color: #ffb020; }
+.form-status strong { display: block; margin-bottom: 0.4rem; text-transform: uppercase; }
+
+/* -----------------------------------------------------------
+   PULSANTE WHATSAPP FISSO
+   ----------------------------------------------------------- */
+.wa-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 900;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 20px 13px 16px;
+    border-radius: 999px;
+    background: #25d366;
+    color: #0b0b0b;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wa-float:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.6);
+}
+
+.wa-float svg {
+    width: 22px;
+    height: 22px;
+    fill: #0b0b0b;
+    flex-shrink: 0;
+}
+
+/* VARIANTE ALTERNATIVA (nera con bordo rosso, più in linea col sito).
+   Per usarla: togli i commenti qui sotto.
+.wa-float {
+    background: #0b0b0b;
+    color: var(--fg);
+    border: 2px solid var(--accent);
+}
+.wa-float svg { fill: #25d366; }
+*/
+
+/* Lo spazio serve perché il pulsante non copra l'ultima riga del footer */
+footer { padding-bottom: 7rem; }
+
+@media (max-width: 480px) {
+    .wa-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 16px 12px 14px;
+        font-size: 0.78rem;
+    }
+}
+
+@media print {
+    .wa-float { display: none; }
 }

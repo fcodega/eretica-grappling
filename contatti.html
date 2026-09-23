@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTATTI | ERETICA BJJ & Grappling a Sondrio.</title>
-    
-    <meta name="description" content="Vieni a lottare: BJJ, Grappling e Lotta a Sondrio.">
+    <title>Dove siamo | Palestra di BJJ e Grappling a Sondrio | ERETICA</title>
 
-    <meta property="og:title" content="ERETICA | BJJ, Grappling e Lotta a Sondrio.">
-    <meta property="og:description" content="Laboratorio di Brazilian Jiu Jitsu e Grappling a Sondrio.">
-    <meta property="og:image" content="https://fcodega.github.io/eretica-grappling/assets/logo_small.jpg">
-    <meta property="og:url" content="https://ereticajiujitsu.com/">
+    <meta name="description" content="Eretica è in Largo Sindelfingen 13 a Sondrio, a pochi minuti da Albosaggia, Caiolo, Piateda e Montagna in Valtellina. Telefono, WhatsApp e mappa.">
+    <link rel="canonical" href="https://ereticajiujitsu.com/contatti.html">
+
     <meta property="og:type" content="website">
-    
+    <meta property="og:site_name" content="ERETICA Jiu Jitsu">
+    <meta property="og:locale" content="it_IT">
+    <meta property="og:title" content="Dove siamo | Palestra di BJJ e Grappling a Sondrio | ERETICA">
+    <meta property="og:description" content="Largo Sindelfingen 13, Sondrio. Telefono, WhatsApp, mappa e app per le prenotazioni.">
+    <meta property="og:url" content="https://ereticajiujitsu.com/contatti.html">
+    <meta property="og:image" content="https://ereticajiujitsu.com/assets/og-home.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Allenamento di Brazilian Jiu Jitsu da Eretica, Sondrio">
+    <meta name="twitter:card" content="summary_large_image">
+
     <meta name="theme-color" content="#FF3E3E">
 
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png?v=2">
-    <link rel="apple-touch-icon" href="assets/favicon.png?v=2">
-    
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/watermark.js" defer></script>
 
     <style>
         /* Stile specifico per questa pagina */
@@ -83,60 +91,7 @@
             fill: var(--accent) !important;
         }
 
-        /* MODALE MAAT (QR CODE) */
-        .modal-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(5px);
-            z-index: 9999;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-        }
-
-        .modal-content {
-            background: var(--bg);
-            border: 1px solid var(--accent);
-            padding: 3rem 2rem;
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(255, 62, 62, 0.15);
-        }
-
-        .close-modal {
-            position: absolute;
-            top: 15px;
-            right: 20px;
-            color: var(--muted);
-            font-size: 2rem;
-            line-height: 1;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .close-modal:hover {
-            color: var(--accent);
-        }
-
-        .qr-image {
-            width: 200px;
-            height: 200px;
-            margin: 1.5rem auto;
-            border: 2px solid var(--border);
-            background: white; /* Sfondo bianco necessario per far leggere il QR Code ai telefoni */
-            padding: 10px;
-            display: block;
-        }
+        /* Le regole della modale MAAT stanno in css/style.css */
     </style>
 </head>
 <body>
@@ -144,12 +99,12 @@
     <header class="navbar">
         <div class="logo">
             <a href="index.html" style="display: flex; align-items: center; text-decoration: none; color: var(--fg);">
-                <img src="assets/logo_small.jpg" alt="Logo Eretica" style="height: 28px; width: auto; margin-right: 12px; filter: grayscale(100%); transition: 0.3s ease;">
+                <img src="assets/logo-nav.png" alt="" width="27" height="28" style="height: 28px; width: auto; margin-right: 12px; filter: grayscale(100%); transition: 0.3s ease;">
                 ERETICA
             </a>
         </div>
         
-        <button class="hamburger" id="hamburger-btn">☰</button>
+        <button class="hamburger" id="hamburger-btn" aria-label="Apri il menu" aria-expanded="false" aria-controls="mobile-nav">☰</button>
         
         <nav id="mobile-nav">
             <a href="about.html">Chi Siamo</a>
@@ -175,20 +130,24 @@
             <div class="contact-info">
                 
                 <h3>Dove lottiamo</h3>
-                <p>Via Largo Sindelfingen 13<br>23100 Sondrio (SO)</p>
-                
+                <p>Largo Sindelfingen 13<br>23100 Sondrio (SO)</p>
+                <p style="color: var(--muted); font-size: 0.9rem; font-weight: 400; margin-top: -1.2rem; margin-bottom: 2rem; max-width: 420px; line-height: 1.5;">
+                    Siamo nel centro di Sondrio, a pochi minuti di auto da Albosaggia, Caiolo, Piateda,
+                    Montagna in Valtellina, Tresivio, Poggiridenti, Chiuro, Berbenno e Castione Andevenno.
+                </p>
+
                 <h3>Telefono</h3>
                 <a href="tel:+393465417684" class="main-link">
                     +39 3465417684 <span style="font-size: 1rem; color: var(--muted); font-weight: 400; vertical-align: middle;">(Francesco)</span>
                 </a>
 
                 <h3>Chat WhatsApp</h3>
-                <a href="https://wa.me/393465417684?text=Sono%20interessato%20al%20corso%20di%20BJJ%20%26%20Grappling%20presso%20Eretica" target="_blank" class="btn-square" aria-label="WhatsApp Eretica">
+                <a href="https://wa.me/393465417684?text=Sono%20interessato%20al%20corso%20di%20BJJ%20%26%20Grappling%20presso%20Eretica" target="_blank" rel="noopener" class="btn-square" aria-label="WhatsApp Eretica">
                     <svg style="width: 40px; height: 40px; fill: #ffffff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
                 </a>
 
                 <h3>Instagram</h3>
-                <a href="https://www.instagram.com/ereticajiujitsu/" target="_blank" class="btn-square" aria-label="Instagram Eretica">
+                <a href="https://www.instagram.com/ereticajiujitsu/" target="_blank" rel="noopener" class="btn-square" aria-label="Instagram Eretica">
                     <svg style="width: 40px; height: 40px; fill: #ffffff;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
                 </a>
 
@@ -206,9 +165,10 @@
             </div>
 
             <div>
-                <iframe 
+                <iframe
                     class="map-container"
-                    src="https://maps.google.com/maps?q=Via+Largo+Sindelfingen+13,+23100+Sondrio&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+                    title="Mappa: Eretica Jiu Jitsu, Largo Sindelfingen 13, Sondrio"
+                    src="https://maps.google.com/maps?q=Via+Largo+Sindelfingen+13,+23100+Sondrio&t=&z=16&ie=UTF8&iwloc=&output=embed"
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade">
@@ -220,8 +180,9 @@
 
     <footer>
         <div class="footer-left">
-            <p>© 2026 ERETICA <br>Via Largo Sindelfingen 13, Sondrio (SO)</p>
+            <p>© 2026 ERETICA <br>Largo Sindelfingen 13, Sondrio (SO)</p>
             <p style="font-size: 0.8rem; color: #666; margin-top: 10px;">Corsi di BJJ, Grappling, Submission Wrestling e Lotta a Sondrio.</p>
+            <p style="font-size: 0.8rem; margin-top: 10px;"><a href="privacy.html" style="color: #666; text-decoration: none; border-bottom: 1px solid #333;">Informativa privacy</a> · <a href="documenti.html" style="color: #666; text-decoration: none; border-bottom: 1px solid #333;">Documenti e trasparenza</a></p>
         </div>
         <div class="footer-right">
             <p>DESIGNED FOR THE UNORTHODOX</p>
@@ -234,7 +195,7 @@
             <h3 style="text-transform: uppercase; font-weight: 900; font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--fg);">App MAAT</h3>
             <p style="color: var(--muted); font-size: 0.85rem;">Inquadra il QR code per scaricare l'app e gestire i tuoi turni sul tatami.</p>
             
-            <img src="assets/maat_QR.jpeg" alt="QR Code MAAT" class="qr-image">
+            <img src="assets/maat_QR.jpeg" alt="QR Code per scaricare l'app MAAT" class="qr-image" width="200" height="200" loading="lazy" decoding="async">
             
             <p style="font-size: 0.8rem; margin-top: 1rem; color: var(--fg);">Sei già da smartphone?</p>
             <a href="https://maat-app.link/h7cpEpBlGQb" style="color: #ffffff; font-weight: 700; text-decoration: underline; font-size: 1.1rem;">Clicca qui per scaricare</a>
@@ -248,8 +209,10 @@
         
         if (btn && nav) {
             btn.addEventListener('click', () => {
-                nav.classList.toggle('active');
-                btn.innerHTML = nav.classList.contains('active') ? '✕' : '☰';
+                const open = nav.classList.toggle('active');
+                btn.innerHTML = open ? '✕' : '☰';
+                btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                btn.setAttribute('aria-label', open ? 'Chiudi il menu' : 'Apri il menu');
             });
         }
 
@@ -294,6 +257,10 @@
             });
         }
     </script>
+
+
+    <a class="wa-float" href="https://wa.me/393465417684?text=Ciao%21%20Vorrei%20informazioni%20su%20Eretica." target="_blank" rel="noopener"
+       aria-label="Scrivici su WhatsApp"><svg viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg><span>Scrivici su WhatsApp</span></a>
 
 </body>
 </html>
